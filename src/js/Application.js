@@ -6,7 +6,7 @@ export default class Application extends EventEmitter {
       READY: "ready",
     };
   }
-
+  
   constructor() {
     super();
     this.emojis = [];
@@ -16,6 +16,12 @@ export default class Application extends EventEmitter {
   setEmojis(emojis) {
     this.emojis = emojis;
   }
+  
+  addBananas() {
+    return this.emojis.map((emoji) => {
+      return emoji + this.banana;
+    });
+  }
 
-  addBananas() {}
+  
 }
